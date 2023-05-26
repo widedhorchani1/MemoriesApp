@@ -2,19 +2,24 @@
   "name": "memories",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
-    "start":"node server.js"
-  },
+    "start": "node server.js",
+    "client":"cd client && npm start",
+    "mern":"concurrently \"npm run dev\" \"npm run client\"" 
+   },
   "keywords": [],
   "author": "Horchni Wided",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "concurrently": "^8.0.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "gitignore": "^0.7.0",
+    "jsonwebtoken": "^9.0.0",
     "mongodb": "^5.4.0",
     "mongoose": "^7.1.1",
     "nodemon": "^2.0.22"
